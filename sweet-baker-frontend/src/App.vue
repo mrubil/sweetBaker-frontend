@@ -1,16 +1,19 @@
 <template>
   <v-app>
     <v-main>
-      <!-- Navigacija -->
-      <v-container>
-        <v-btn text to="/" component="router-link">Home</v-btn>
-        <v-btn text to="/about" component="router-link">About</v-btn>
-      </v-container>
+      <v-app-bar>
+        <v-img
+          class="mx-4"
+          src="/favicon.png"
+          max-width="32"
+          max-height="32"
+        ></v-img>
+        <v-btn variant="plain" text to="/" component="router-link"
+          >Sweet Baker</v-btn
+        >
+      </v-app-bar>
 
-      <!-- Prikaz stranica -->
-      <v-container>
-        <router-view />
-      </v-container>
+      <router-view />
     </v-main>
   </v-app>
 </template>
@@ -30,9 +33,4 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
-/* Stilovi za navigaciju */
-</style>
-<style scoped>
-/* Dodaj stilove ako želiš */
-</style>
+<style></style>
