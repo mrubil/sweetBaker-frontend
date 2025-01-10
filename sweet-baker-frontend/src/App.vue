@@ -1,14 +1,15 @@
 <template>
   <v-app>
     <v-main>
+      <!-- Navigacija -->
       <v-container>
-        <v-card class="mx-auto my-5" max-width="500" outlined>
-          <v-card-title class="text-h4">Dobrodošli u Vuetify</v-card-title>
-          <v-card-text>Ovo je osnovni primjer Vuetify dizajna.</v-card-text>
-          <v-card-actions>
-            <v-btn color="primary" @click="showAlert">Klikni me</v-btn>
-          </v-card-actions>
-        </v-card>
+        <v-btn text to="/" component="router-link">Home</v-btn>
+        <v-btn text to="/about" component="router-link">About</v-btn>
+      </v-container>
+
+      <!-- Prikaz stranica -->
+      <v-container>
+        <router-view />
       </v-container>
     </v-main>
   </v-app>
@@ -16,18 +17,7 @@
 
 <script>
 import { defineComponent } from "vue";
-
-// Uvezi komponente koje koristiš iz Vuetify
-import {
-  VApp,
-  VMain,
-  VContainer,
-  VCard,
-  VCardTitle,
-  VCardText,
-  VCardActions,
-  VBtn,
-} from "vuetify/components";
+import { VApp, VMain, VContainer, VBtn } from "vuetify/components";
 
 export default defineComponent({
   name: "App",
@@ -35,20 +25,14 @@ export default defineComponent({
     VApp,
     VMain,
     VContainer,
-    VCard,
-    VCardTitle,
-    VCardText,
-    VCardActions,
     VBtn,
-  },
-  methods: {
-    showAlert() {
-      alert("Pozdrav iz Vuetify aplikacije!");
-    },
   },
 });
 </script>
 
+<style scoped>
+/* Stilovi za navigaciju */
+</style>
 <style scoped>
 /* Dodaj stilove ako želiš */
 </style>

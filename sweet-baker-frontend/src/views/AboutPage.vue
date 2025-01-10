@@ -5,6 +5,7 @@
         <v-card class="mx-auto my-5" max-width="600">
           <v-card-title>O nama</v-card-title>
           <v-card-text>
+            <router-view />
             Ovdje možeš napisati informacije o aplikaciji.
           </v-card-text>
         </v-card>

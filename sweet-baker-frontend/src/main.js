@@ -4,11 +4,16 @@ import App from "./App.vue";
 // Uvezi Vuetify i osnovne stilove
 import { createVuetify } from "vuetify";
 import "vuetify/styles"; // Vuetify stilovi
+import * as components from "vuetify/components";
+import * as directives from "vuetify/directives";
 
 import router from "./router";
 
 // Kreiraj Vuetify instancu
-const vuetify = createVuetify();
+const vuetify = createVuetify({
+  components,
+  directives,
+});
 
 // Kreiraj Vue aplikaciju
 const app = createApp(App);
