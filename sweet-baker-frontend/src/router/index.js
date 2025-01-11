@@ -1,20 +1,44 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 // Uvezi tvoje komponente
-import HomePage from "../views/HomePage.vue";
-import AboutPage from "../views/AboutPage.vue";
+import home from "../views/home.vue";
+import profile from "../views/profile.vue";
+import NoviRecept from "../views/noviRecept.vue";
+import PregledRecepta from "../views/pregledRecepta.vue";
+import UrediRecept from "../views/urediRecept.vue";
+import UrediProfil from "../views/urediProfil.vue";
 
 // Definiraj rute
 const routes = [
   {
     path: "/",
     name: "home",
-    component: HomePage,
+    component: home,
   },
   {
-    path: "/about",
-    name: "about",
-    component: AboutPage,
+    path: "/profile",
+    name: "profile",
+    component: profile,
+  },
+  {
+    path: "/noviRecept",
+    name: "noviRecept",
+    component: NoviRecept,
+  },
+  {
+    path: "/pregledRecepta",
+    name: "pregledRecepta",
+    component: PregledRecepta,
+  },
+  {
+    path: "/urediRecept",
+    name: "urediRecept",
+    component: UrediRecept,
+  },
+  {
+    path: "/urediProfil",
+    name: "urediProfil",
+    component: UrediProfil,
   },
 ];
 

@@ -11,6 +11,20 @@
         <v-btn variant="plain" text to="/" component="router-link"
           >Sweet Baker</v-btn
         >
+        <v-spacer></v-spacer>
+
+        <v-text-field
+          prepend-inner-icon="mdi-magnify"
+          label="Pretraživanje"
+          clearable
+          rounded
+          variant="outlined"
+        ></v-text-field>
+
+        <v-spacer></v-spacer>
+        <v-btn variant="plain" text to="/profile" component="router-link"
+          >Moj profil</v-btn
+        >
       </v-app-bar>
 
       <router-view />

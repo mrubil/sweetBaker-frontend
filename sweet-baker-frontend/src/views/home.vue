@@ -1,7 +1,7 @@
 <template>
   <body>
     <v-img
-      max-height="125"
+      max-height="150"
       src="https://picsum.photos/350/165?random"
       cover
     ></v-img>
