@@ -2,11 +2,11 @@ import { createRouter, createWebHistory } from "vue-router";
 
 // Uvezi tvoje komponente
 import home from "../views/home.vue";
-import profile from "../views/profile.vue";
 import NoviRecept from "../views/noviRecept.vue";
 import PregledRecepta from "../views/pregledRecepta.vue";
 import UrediRecept from "../views/urediRecept.vue";
 import UrediProfil from "../views/urediProfil.vue";
+import MojProfil from "../views/mojProfil.vue";
 
 // Definiraj rute
 const routes = [
@@ -16,9 +16,9 @@ const routes = [
     component: home,
   },
   {
-    path: "/profile",
-    name: "profile",
-    component: profile,
+    path: "/mojProfil",
+    name: "mojProfil",
+    component: MojProfil,
   },
   {
     path: "/noviRecept",

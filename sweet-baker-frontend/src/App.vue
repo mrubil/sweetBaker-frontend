@@ -22,7 +22,7 @@
         ></v-text-field>
 
         <v-spacer></v-spacer>
-        <v-btn variant="plain" text to="/profile" component="router-link"
+        <v-btn variant="plain" text to="/mojProfil" component="router-link"
           >Moj profil</v-btn
         >
       </v-app-bar>
@@ -35,6 +35,7 @@
 <script>
 import { defineComponent } from "vue";
 import { VApp, VMain, VContainer, VBtn } from "vuetify/components";
+import { store } from "./store";
 
 export default defineComponent({
   name: "App",

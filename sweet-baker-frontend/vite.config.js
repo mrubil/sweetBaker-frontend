@@ -10,4 +10,9 @@ export default defineConfig({
   build: {
     sourcemap: true, // Omogućava generisanje source map-ova
   },
+  resolve: {
+    alias: {
+      "@": "/src",
+    },
+  },
 });

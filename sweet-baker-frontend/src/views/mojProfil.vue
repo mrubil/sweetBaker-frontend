@@ -1,6 +1,6 @@
 <template>
   <body>
-    Ovo je profil
+    Ovo je profil prijavljenog korisnika
   </body>
 </template>
 

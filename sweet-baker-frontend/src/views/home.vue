@@ -1,10 +1,17 @@
 <template>
   <body>
-    <v-img
-      max-height="150"
-      src="https://picsum.photos/350/165?random"
-      cover
-    ></v-img>
+    <v-row
+      style="
+        height: 300px;
+        background: linear-gradient(to right, #e1f5fe, #0000, #ffcdd2);
+      "
+    >
+      <v-col></v-col>
+      <v-col>
+        <v-img max-height="100vh" :src="cokoladnatorta" cover></v-img
+      ></v-col>
+    </v-row>
+
     <v-card class="mx-auto my-12" max-width="300">
       <v-img
         height="250"
@@ -35,9 +42,14 @@
 </template>
 
 <script>
+import cokoladnatorta from "@/assets/cake4.png";
+
 export default {
   name: "HomePage",
-  data: () => ({ rating: 4.8 }),
+  data: () => ({
+    rating: 4.8,
+    cokoladnatorta: cokoladnatorta,
+  }),
 };
 </script>
 
