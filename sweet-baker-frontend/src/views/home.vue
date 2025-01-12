@@ -1,17 +1,23 @@
 <template>
   <body>
-    <v-row
-      style="
-        height: 300px;
-        background: linear-gradient(to right, #e1f5fe, #0000, #ffcdd2);
-      "
-    >
-      <v-col></v-col>
-      <v-col>
-        <v-img max-height="100vh" :src="cokoladnatorta" cover></v-img
-      ></v-col>
-    </v-row>
-
+    <v-container fluid class="pa-0">
+      <v-row
+        justify="space-between"
+        style="
+          height: 400px;
+          background: linear-gradient(to right, #e1f5fe, #0000, #ffcdd2);
+        "
+      >
+        <v-col align-self="center" class="pa-4 ma-2">
+          <h1 class="welcome">
+            Inspiriraj se i pripremaj savršene deserte svaki dan!
+          </h1>
+        </v-col>
+        <v-col align-self="center" class="pa-3 ma-2">
+          <v-img max-height="380" :src="cokoladnatorta" contain></v-img
+        ></v-col>
+      </v-row>
+    </v-container>
     <v-card class="mx-auto my-12" max-width="300">
       <v-img
         height="250"
@@ -42,7 +48,7 @@
 </template>
 
 <script>
-import cokoladnatorta from "@/assets/cake4.png";
+import cokoladnatorta from "@/assets/cake2.png";
 
 export default {
   name: "HomePage",
@@ -58,5 +64,10 @@ body {
   background-color: rgb(255, 255, 255);
   margin: 0;
   min-height: 100vh;
+}
+.welcome {
+  font-weight: bold;
+  color: #000000;
+  margin-left: 20px;
 }
 </style>
