@@ -1,15 +1,10 @@
 <template>
   <v-app>
     <v-main>
-      <v-app-bar>
-        <v-img
-          class="mx-4"
-          src="/favicon.png"
-          max-width="32"
-          max-height="32"
-        ></v-img>
+      <v-app-bar style="height: 60px">
         <v-btn variant="plain" text to="/" component="router-link"
-          >Sweet Baker</v-btn
+          ><span class="sweet">Sweet</span>
+          <span class="baker">Baker</span></v-btn
         >
         <v-spacer></v-spacer>
 
@@ -48,4 +43,11 @@ export default defineComponent({
 });
 </script>
 
-<style></style>
+<style>
+.sweet {
+  color: #ff1744;
+}
+.baker {
+  color: rgb(0, 0, 0);
+}
+</style>

@@ -12,6 +12,12 @@
           <h1 class="welcome">
             Inspiriraj se i pripremaj savršene deserte svaki dan!
           </h1>
+          <br />
+          <p>
+            <v-btn color="#FF1744" rounded class="ml-5" style="color: white"
+              >Registriraj se</v-btn
+            ><v-btn rounded class="ml-5">Prijava</v-btn>
+          </p>
         </v-col>
         <v-col align-self="center" class="pa-3 ma-2">
           <v-img max-height="380" :src="cokoladnatorta" contain></v-img
