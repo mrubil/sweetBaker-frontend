@@ -1,10 +1,10 @@
 <template>
   <body>
-    <v-container fluid class="pa-0">
+    <v-container fluid class="pa-2">
       <v-row
         justify="space-between"
         style="
-          height: 400px;
+          height: 300px;
           background: linear-gradient(to right, #e1f5fe, #0000, #ffcdd2);
         "
       >
@@ -20,36 +20,44 @@
           </p>
         </v-col>
         <v-col align-self="center" class="pa-3 ma-2">
-          <v-img max-height="380" :src="cokoladnatorta" contain></v-img
+          <v-img max-height="280" :src="cokoladnatorta" contain></v-img
         ></v-col>
       </v-row>
     </v-container>
-    <v-card class="mx-auto my-12" max-width="300">
-      <v-img
-        height="250"
-        src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
-        cover
-      ></v-img>
+    <div class="main">
+      <div class="najbolji-recepti">
+        <h2>Najbolji recepti</h2>
+        <v-card class="mx-auto my-10" max-width="200">
+          <v-img
+            height="200"
+            src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
+            cover
+          ></v-img>
 
-      <v-card-item>
-        <v-card-title>Čokoladna torta</v-card-title>
+          <v-card-item>
+            <v-card-title>Čokoladna torta</v-card-title>
 
-        <v-rating
-          v-model="rating"
-          active-color="red-accent-4"
-          color="red-lighten-1"
-          class="ma-1"
-          density="compact"
-          readonly
-        ></v-rating>
-      </v-card-item>
+            <v-rating
+              v-model="rating"
+              active-color="red-accent-4"
+              color="red-lighten-1"
+              class="ma-1"
+              density="compact"
+              readonly
+            ></v-rating>
+          </v-card-item>
 
-      <v-card-text>
-        <div>user123</div>
-      </v-card-text>
+          <v-card-text>
+            <div>user123</div>
+          </v-card-text>
 
-      <v-divider class="mx-4 mb-1"></v-divider>
-    </v-card>
+          <v-divider class="mx-4 mb-1"></v-divider>
+        </v-card>
+      </div>
+      <div class="top-korisnici">
+        <h2>Istražite recepte najpopularnijih slastičara</h2>
+      </div>
+    </div>
   </body>
 </template>
 
@@ -74,6 +82,10 @@ body {
 .welcome {
   font-weight: bold;
   color: #000000;
+  margin-left: 20px;
+}
+.main {
+  padding: 20px;
   margin-left: 20px;
 }
 </style>

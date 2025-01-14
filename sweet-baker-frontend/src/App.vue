@@ -13,7 +13,9 @@
           label="Pretraživanje"
           clearable
           rounded
-          variant="outlined"
+          variant="solo"
+          density="compact"
+          class="pt-4"
         ></v-text-field>
 
         <v-spacer></v-spacer>
@@ -23,6 +25,26 @@
       </v-app-bar>
 
       <router-view />
+
+      <v-bottom-navigation>
+        <v-btn value="recipes">
+          <v-icon>mdi-cupcake</v-icon>
+
+          <span>Recepti</span>
+        </v-btn>
+
+        <v-btn value="plus">
+          <v-icon>mdi-plus</v-icon>
+
+          <span>Novi recept</span>
+        </v-btn>
+
+        <v-btn value="natjecanje">
+          <v-icon>mdi-silverware-variant</v-icon>
+
+          <span>Natjecanja</span>
+        </v-btn>
+      </v-bottom-navigation>
     </v-main>
   </v-app>
 </template>
