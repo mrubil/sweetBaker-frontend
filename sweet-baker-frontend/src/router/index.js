@@ -6,7 +6,9 @@ import NoviRecept from "../views/noviRecept.vue";
 import PregledRecepta from "../views/pregledRecepta.vue";
 import UrediRecept from "../views/urediRecept.vue";
 import UrediProfil from "../views/urediProfil.vue";
-import MojProfil from "../views/mojProfil.vue";
+import mojProfil from "../views/mojProfil.vue";
+import SviRecepti from "../views/sviRecepti.vue";
+import Rang from "../views/rang.vue";
 
 // Definiraj rute
 const routes = [
@@ -18,7 +20,7 @@ const routes = [
   {
     path: "/mojProfil",
     name: "mojProfil",
-    component: MojProfil,
+    component: mojProfil,
   },
   {
     path: "/noviRecept",
@@ -39,6 +41,16 @@ const routes = [
     path: "/urediProfil",
     name: "urediProfil",
     component: UrediProfil,
+  },
+  {
+    path: "/sviRecepti",
+    name: "sviRecepti",
+    component: SviRecepti,
+  },
+  {
+    path: "/rang",
+    name: "rang",
+    component: Rang,
   },
 ];
 

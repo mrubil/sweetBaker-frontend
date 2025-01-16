@@ -2,10 +2,10 @@
   <v-app>
     <v-main>
       <v-app-bar style="height: 60px">
-        <v-btn variant="plain" text to="/" component="router-link"
-          ><span class="sweet">Sweet</span>
-          <span class="baker">Baker</span></v-btn
-        >
+        <router-link to="/" class="v-btn text pl-4">
+          <span class="sweet">Sweet</span>
+          <span class="baker">Baker</span>
+        </router-link>
         <v-spacer></v-spacer>
 
         <v-text-field
@@ -19,32 +19,34 @@
         ></v-text-field>
 
         <v-spacer></v-spacer>
-        <v-btn variant="plain" text to="/mojProfil" component="router-link"
-          >Moj profil</v-btn
-        >
+        <router-link to="/mojProfil" class="v-btn text pr-4 text-black">
+          MOJ PROFIL
+        </router-link>
       </v-app-bar>
 
       <router-view />
 
-      <v-bottom-navigation>
-        <v-btn value="recipes">
+      <v-navigation-drawer location="left" permanent rail class="pt-10">
+        <v-list-item
+          class="sidebar"
+          to="/sviRecepti"
+          active-class="active-link"
+        >
           <v-icon>mdi-cupcake</v-icon>
+        </v-list-item>
 
-          <span>Recepti</span>
-        </v-btn>
-
-        <v-btn value="plus">
+        <v-list-item
+          class="sidebar"
+          to="/noviRecept"
+          active-class="active-link"
+        >
           <v-icon>mdi-plus</v-icon>
+        </v-list-item>
 
-          <span>Novi recept</span>
-        </v-btn>
-
-        <v-btn value="natjecanje">
+        <v-list-item class="sidebar" to="/rang" active-class="active-link">
           <v-icon>mdi-silverware-variant</v-icon>
-
-          <span>Natjecanja</span>
-        </v-btn>
-      </v-bottom-navigation>
+        </v-list-item>
+      </v-navigation-drawer>
     </v-main>
   </v-app>
 </template>
@@ -71,5 +73,9 @@ export default defineComponent({
 }
 .baker {
   color: rgb(0, 0, 0);
+}
+.sidebar {
+  padding: 18px;
+  margin-bottom: 10px;
 }
 </style>

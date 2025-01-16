@@ -27,6 +27,7 @@
     <div class="main">
       <div class="najbolji-recepti">
         <h2>Najbolji recepti</h2>
+
         <v-card class="mx-auto my-10" max-width="200">
           <v-img
             height="200"
