@@ -41,7 +41,7 @@
       </div>
       <div class="top-korisnici">
         <h2>Istražite recepte najpopularnijih slastičara</h2>
-        <v-row justify="center" class="my-4">
+        <v-row justify="center" class="my-0">
           <v-col
             v-for="user in users.slice(0, 5)"
             :key="user.id"

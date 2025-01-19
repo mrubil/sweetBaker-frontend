@@ -1,7 +1,6 @@
-//komponenta koja prikazuje sliku korisnika i njegovo ime
 <template>
-  <body>
-    <v-row class="rows pt-6 my-auto mx-auto">
+  <div class="profil">
+    <v-row justify="center" class="pt-6">
       <v-avatar size="130">
         <v-img
           :src="
@@ -10,9 +9,9 @@
           "
         ></v-img>
       </v-avatar>
-      <h3>@{{ user.username }}</h3>
     </v-row>
-  </body>
+    <h3 class="username">@{{ user.username }}</h3>
+  </div>
 </template>
 
 <script>
@@ -23,3 +22,15 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.profil {
+  text-align: center;
+  padding-bottom: 16px;
+}
+
+.username {
+  margin-top: 8px;
+  font-size: 1.2rem;
+}
+</style>
