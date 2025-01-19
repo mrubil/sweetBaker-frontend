@@ -1,4 +1,5 @@
 import { createApp } from "vue";
+import { createPinia } from "pinia";
 import App from "./App.vue";
 
 // Uvezi Vuetify i osnovne stilove
@@ -20,6 +21,7 @@ const app = createApp(App);
 
 // Koristi Vuetify kao plugin
 app.use(vuetify);
+app.use(createPinia());
 app.use(router);
 
 app.mount("#app");

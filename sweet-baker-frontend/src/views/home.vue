@@ -27,33 +27,17 @@
     <div class="main">
       <div class="najbolji-recepti">
         <h2>Najbolji recepti</h2>
-
-        <v-card class="mx-auto my-10" max-width="200">
-          <v-img
-            height="200"
-            src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
-            cover
-          ></v-img>
-
-          <v-card-item>
-            <v-card-title>Čokoladna torta</v-card-title>
-
-            <v-rating
-              v-model="rating"
-              active-color="red-accent-4"
-              color="red-lighten-1"
-              class="ma-1"
-              density="compact"
-              readonly
-            ></v-rating>
-          </v-card-item>
-
-          <v-card-text>
-            <div>user123</div>
-          </v-card-text>
-
-          <v-divider class="mx-4 mb-1"></v-divider>
-        </v-card>
+        <v-row justify="center" class="my-4">
+          <v-col
+            v-for="recept in najboljiRecepti"
+            :key="recept.id"
+            cols="12"
+            md="2"
+            sm="4"
+          >
+            <Recept :recept="recept" />
+          </v-col>
+        </v-row>
       </div>
       <div class="top-korisnici">
         <h2>Istražite recepte najpopularnijih slastičara</h2>
@@ -64,13 +48,22 @@
 
 <script>
 import cokoladnatorta from "@/assets/cake2.png";
+import { useRecipeStore } from "@/stores/store";
+import Recept from "@/components/Recept.vue";
+import { computed } from "vue";
 
 export default {
   name: "HomePage",
+  components: { Recept },
   data: () => ({
     rating: 4.8,
     cokoladnatorta: cokoladnatorta,
   }),
+  setup() {
+    const recipeStore = useRecipeStore();
+    const najboljiRecepti = computed(() => recipeStore.najboljiRecepti);
+    return { najboljiRecepti };
+  },
 };
 </script>
 

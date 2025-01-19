@@ -54,7 +54,6 @@
 <script>
 import { defineComponent } from "vue";
 import { VApp, VMain, VContainer, VBtn } from "vuetify/components";
-import { store } from "./store";
 
 export default defineComponent({
   name: "App",
