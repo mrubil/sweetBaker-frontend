@@ -1,4 +1,5 @@
 Prototip frontenda web aplikacije Sweet Baker.
+Javni URL: https://sweet-baker.netlify.app/
 
 # Vue 3 + Vite
 
