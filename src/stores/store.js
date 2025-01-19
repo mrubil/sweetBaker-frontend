@@ -7,26 +7,36 @@ export const useRecipeStore = defineStore("recipes", {
         id: 1,
         ime: "Martina Rubil",
         username: "martinar",
+        slikaProfila:
+          "https://media.istockphoto.com/id/480379746/photo/cook-decorating-a-plate-at-a-restaurant.jpg?s=612x612&w=0&k=20&c=ZfRzr7xqK9a89DzUZ1h-oEHUEzi6FF0hiDpljIdtgt0=",
       },
       {
         id: 2,
-        ime: "Ivan Horvat",
-        username: "ivan_h",
+        ime: "Ivana Horvat",
+        username: "ivana_h",
+        slikaProfila:
+          "https://st3.depositphotos.com/5586578/14717/i/1600/depositphotos_147174929-stock-photo-girl-cooking-sweet-dessert-culinary.jpg ",
       },
       {
         id: 3,
         ime: "Petar Marinić",
         username: "petar2005",
+        slikaProfila:
+          "https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg",
       },
       {
         id: 4,
         ime: "Marija Martić",
         username: "marija_m",
+        slikaProfila:
+          "https://www.perfocal.com/blog/content/images/2021/01/Perfocal_17-11-2019_TYWFAQ_100_standard-3.jpg",
       },
       {
         id: 5,
         ime: "Zorica Zorić",
         username: "zoricaa",
+        slikaProfila:
+          "https://sarahclaysocial.com/wp-content/uploads/2020/10/sarah-clay-3.jpg",
       },
     ],
     recipes: [
@@ -108,6 +118,9 @@ export const useRecipeStore = defineStore("recipes", {
     currentUser: {
       id: 1,
       name: "Martina Rubil",
+      slikaProfila:
+        "https://media.istockphoto.com/id/1428412216/photo/a-male-chef-pouring-sauce-on-meal.jpg?s=612x612&w=0&k=20&c=8U3mrgWsuB7pB8axtGj89MXRkHDKodEli9F6wKgPT4A=",
+      username: "martinar",
     },
   }),
   getters: {

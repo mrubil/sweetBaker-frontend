@@ -41,6 +41,17 @@
       </div>
       <div class="top-korisnici">
         <h2>Istražite recepte najpopularnijih slastičara</h2>
+        <v-row justify="center" class="my-4">
+          <v-col
+            v-for="user in users.slice(0, 5)"
+            :key="user.id"
+            cols="12"
+            md="2"
+            sm="4"
+          >
+            <Profile :user="user" />
+          </v-col>
+        </v-row>
       </div>
     </div>
   </body>
@@ -51,10 +62,11 @@ import cokoladnatorta from "@/assets/cake2.png";
 import { useRecipeStore } from "@/stores/store";
 import Recept from "@/components/Recept.vue";
 import { computed } from "vue";
+import Profile from "../components/Profile.vue";
 
 export default {
   name: "HomePage",
-  components: { Recept },
+  components: { Recept, Profile },
   data: () => ({
     rating: 4.8,
     cokoladnatorta: cokoladnatorta,
@@ -62,7 +74,8 @@ export default {
   setup() {
     const recipeStore = useRecipeStore();
     const najboljiRecepti = computed(() => recipeStore.najboljiRecepti);
-    return { najboljiRecepti };
+    const users = computed(() => recipeStore.users);
+    return { najboljiRecepti, users };
   },
 };
 </script>

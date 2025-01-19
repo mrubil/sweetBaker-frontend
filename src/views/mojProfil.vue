@@ -13,8 +13,9 @@
         ></v-fab
         ><v-row class="rows pt-6">
           <v-avatar size="130" color="#ff1744">
-            <v-icon icon="mdi-account-circle" size="110"></v-icon></v-avatar
-        ></v-row>
+            <v-img :src="currentUser.slikaProfila"></v-img>
+          </v-avatar>
+        </v-row>
         <v-row class="rows"
           ><h1>{{ currentUser.name }}</h1></v-row
         >
@@ -49,8 +50,6 @@ export default {
   components: { Recept },
   setup() {
     const recipeStore = useRecipeStore();
-
-    // Koristimo computed za reaktivno praćenje recepata i korisnika
     const userRecipes = computed(() => recipeStore.userRecipes);
     const currentUser = computed(() => recipeStore.currentUser);
 

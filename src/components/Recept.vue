@@ -3,7 +3,7 @@
     <v-img height="200" :src="recept.slika || defaultImage" cover></v-img>
 
     <v-card-item>
-      <v-card-title style="white-space: normal">{{
+      <v-card-title class="font-weight-bold" style="white-space: normal">{{
         recept.naslov
       }}</v-card-title>
 
@@ -21,7 +21,7 @@
     </v-card-item>
 
     <v-card-text>
-      <div>{{ username }}</div>
+      <div>@{{ username }}</div>
     </v-card-text>
 
     <v-divider class="mx-4 mb-1"></v-divider>
