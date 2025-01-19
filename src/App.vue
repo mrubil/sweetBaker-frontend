@@ -9,8 +9,9 @@
         <v-spacer></v-spacer>
 
         <v-text-field
+          v-model="searchQuery"
           prepend-inner-icon="mdi-magnify"
-          label="Pretraživanje"
+          label="npr. Čokoladna torta"
           clearable
           rounded
           variant="solo"

@@ -18,15 +18,17 @@
 </template>
 
 <script>
-import { useRecipeStore } from "@/stores/store";
-import Recept from "../components/Recept.vue";
 import { computed } from "vue";
+import { useRecipeStore } from "@/stores/store";
+
+import Recept from "../components/Recept.vue";
 
 export default {
   name: "sviRecepti",
   components: { Recept },
   setup() {
     const recipeStore = useRecipeStore();
+
     const najnovijiRecepti = computed(() => recipeStore.najnovijiRecepti);
     return { najnovijiRecepti };
   },

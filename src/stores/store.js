@@ -143,6 +143,75 @@ export const useRecipeStore = defineStore("recipes", {
         rating: 4.7,
         datum: new Date("2024-01-18").toISOString(),
       },
+      {
+        id: 8,
+        naslov: "Tiramisu",
+        opis: "Klasični talijanski desert s kavom i mascarpone kremom",
+        upute:
+          "1. Prvo pripremite kavu i ostavite da se ohladi. 2. Umutite žumanjke s šećerom, a zatim dodajte mascarpone sir i dobro izmiješajte. 3. Umutite bjelanjke u čvrsti snijeg i nježno ih umiješajte u mascarpone smjesu. 4. Umočite piškote u hladnu kavu i slažite ih u slojeve s kremom. 5. Završite s kremom i pospite kakao prahom. 6. Ostavite u hladnjaku nekoliko sati prije posluživanja.",
+        sastojci:
+          "250g mascarpone sira, 4 jaja, 100g šećera, 200g piškota, 150ml kave, kakao prah za posipanje",
+        slika:
+          "https://recipes.net/wp-content/uploads/2024/03/what-is-tiramisu-1709272702.jpg",
+        userId: 2,
+        rating: 4.9,
+        datum: new Date("2024-01-19").toISOString(),
+      },
+      {
+        id: 9,
+        naslov: "Panna Cotta",
+        opis: "Jednostavan, ali ukusan talijanski desert",
+        upute:
+          "1. U maloj posudi zagrijte vrhnje sa šećerom i vanilijom dok ne postane vruće, ali ne prokuha. 2. Umutite želatinu u hladnoj vodi i dodajte je u vruće vrhnje. 3. Dobro izmiješajte i ulijte smjesu u čaše. 4. Ostavite u hladnjaku najmanje 4 sata. 5. Poslužite s umakom od jagoda ili karamela.",
+        sastojci:
+          "500ml slatkog vrhnja, 100g šećera, 1 vanilin šećer, 10g želatine, 200g jagoda (za umak)",
+        slika:
+          "https://kaufland.media.schwarz/is/image/schwarz/Bijela%20panna%20cotta?JGstbGVnYWN5LW9uc2l0ZS00JA==",
+        userId: 4,
+        rating: 4.8,
+        datum: new Date("2024-01-20").toISOString(),
+      },
+      {
+        id: 10,
+        naslov: "Čokoladni soufflé",
+        opis: "Lagana i sočna čokoladna poslastica koja se topi u ustima",
+        upute:
+          "1. Otopite čokoladu i maslac u vodenoj kupelji. 2. Umutite jaja sa šećerom, a zatim dodajte otopljenu čokoladu. 3. Dodajte brašno i dobro promiješajte. 4. Ulijte smjesu u namašćene kalupe i pecite u prethodno zagrijanoj pećnici na 200°C oko 10 minuta. 5. Poslužite odmah, posipano šećerom u prahu.",
+        sastojci:
+          "200g tamne čokolade, 100g maslaca, 4 jaja, 100g šećera, 50g brašna, šećer u prahu",
+        slika:
+          "https://sallysbakingaddiction.com/wp-content/uploads/2021/01/chocolate-souffles.jpg",
+        userId: 3,
+        rating: 4.9,
+        datum: new Date("2024-01-21").toISOString(),
+      },
+      {
+        id: 11,
+        naslov: "Pavlova",
+        opis: "Slatki desert s hrskavom meringom i svježim voćem",
+        upute:
+          "1. Umutite bjelanjke sa šećerom dok ne dobijete čvrsti snijeg. 2. Oblikujte meringu na papiru za pečenje i pecite u pećnici na 120°C oko sat i pol. 3. Nakon što se ohladi, stavite na meringu šlag i svježe voće po izboru. 4. Poslužite odmah.",
+        sastojci:
+          "4 bjelanjka, 200g šećera, 300ml slatke pavlake, 200g jagoda, 100g kivija, 50g borovnica",
+        slika:
+          "https://thescranline.com/wp-content/uploads/2023/12/PAVLOVA-23-S-02.jpg",
+        userId: 2,
+        rating: 4.8,
+        datum: new Date("2024-01-22").toISOString(),
+      },
+      {
+        id: 12,
+        naslov: "Lemon Curd",
+        opis: "Slatko-kiselkasti kremasti desert koji se može koristiti kao nadjev ili samostalno",
+        upute:
+          "1. Umutite jaja sa šećerom, limunovim sokom i koricom. 2. Stavite smjesu na laganu vatru i miješajte dok ne postane gusta. 3. Dodajte maslac i miješajte dok se ne otopi. 4. Ostavite da se ohladi, a zatim spremite u staklenku i čuvajte u hladnjaku.",
+        sastojci: "3 jaja, 200g šećera, sok i korica 2 limuna, 100g maslaca",
+        slika:
+          "https://www.marthastewart.com/thmb/ohhHoIKK8YezrOsuC9Lhzz3P3VY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/lemon-curd-phyllo-tartlets-2gxruwozahh8eto-7kfvmb-0522_horiz_0-e883aeb1f5324853bea8a0d5d996cf47.jpgitokTK5euKG6",
+        userId: 3,
+        rating: 4.7,
+        datum: new Date("2024-01-23").toISOString(),
+      },
     ],
     currentUser: {
       id: 1,
@@ -164,6 +233,12 @@ export const useRecipeStore = defineStore("recipes", {
     },
     najboljiRecepti: (state) => {
       return state.recipes.sort((a, b) => b.rating - a.rating).slice(0, 5);
+    },
+  },
+  actions: {
+    dodajRecept(recipe) {
+      recipe.id = this.recipes.length + 1;
+      this.recipes.push(recipe);
     },
   },
 });
